@@ -2,11 +2,16 @@ module: Siesta
 author: Bust Out Solutions
 author_url: http://bustoutsolutions.com
 github_url: https://github.com/bustoutsolutions/siesta
-exclude: ["**/*-ObjC.swift", "**/*Deprecations.swift"]
+exclude:
+  - "**/*-ObjC.swift"
+  - "**/*Deprecations.swift"
+  - "Source/Siesta/Support/Siesta-ObjC.swift"     # until Cocoadocs gets https://github.com/realm/jazzy/pull/640
+  - "Source/SiestaUI/SiestaUI-ObjC.swift"         # ditto
+  - "Source/Siesta/Support/Ω_Deprecations.swift"  # ditto
 
 copyright: '© 2016 [Bust Out Solutions](http://bustoutsolutions.com) under [open source license](https://github.com/bustoutsolutions/siesta/blob/master/LICENSE).'
 
-swift_version: 2.2
+swift_version: 3.0
 
 theme: fullwidth
 
@@ -16,7 +21,6 @@ custom_categories:
     - Service
     - Resource
     - Entity
-    - Error
     - Configuration
     - ConfigurationPatternConvertible
     - TypedContentAccessors
@@ -27,11 +31,13 @@ custom_categories:
     - ResourceObserverClosure
     - ResourceEvent
 
-  - name: Network Requests
+  - name: Requests
     children:
     - Request
     - RequestMethod
+    - RequestError
     - Response
+    - ResponseInfo
     - RequestChainAction
 
   - name: Response Pipeline
@@ -41,6 +47,7 @@ custom_categories:
     - PipelineStageKey
     - ResponseTransformer
     - ResponseContentTransformer
+    - InputTypeMismatchAction
     - JSONResponseTransformer(_:)
     - TextResponseTransformer(_:)
     - ImageResponseTransformer(_:)
@@ -62,6 +69,7 @@ custom_categories:
     - RequestNetworkingCompletionCallback
     - RequestTransferMetrics
     - NSURLSessionProvider
+    - SessionTaskContainer
     - AlamofireProvider
 
   - name: Logging

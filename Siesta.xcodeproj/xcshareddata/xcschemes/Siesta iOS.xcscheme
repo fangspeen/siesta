@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,6 +17,20 @@
                BlueprintIdentifier = "DA336E4E1B2E6DDB006F702A"
                BuildableName = "Siesta.framework"
                BlueprintName = "Siesta iOS"
+               ReferencedContainer = "container:Siesta.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DAC0B37D1D651CB500D25C44"
+               BuildableName = "SiestaUI.framework"
+               BlueprintName = "SiestaUI iOS"
                ReferencedContainer = "container:Siesta.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
